@@ -4,6 +4,7 @@
   <% @movies.each do |m| %>
     <%= "Movie: #{ m.name }" %>
     <%= "Ranking: #{ m.movie_ranking }" %>
+    <%= link_to "Upvote", movie_path(m.id) %>
   <% end %>
 
   <%= link_to "View all Media", root_path %>
