@@ -1,1 +1,17 @@
-<h1>Movie#new Page</h1>
+<h1>Add A New Movie</h1>
+
+<%= form_for @movie do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br></br>
+
+  <%= f.label :director %>
+  <%= f.text_field :director %>
+  <br></br>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <br></br>
+
+  <%= f.submit "Submit" %>
+<% end %>
