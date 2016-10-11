@@ -4,7 +4,7 @@ class CreateAlbums < ActiveRecord::Migration
       t.string :name
       t.string :artist
       t.string :description
-      t.fixnum :album_ranking
+      t.integer :album_ranking
 
       t.timestamps null: false
     end
