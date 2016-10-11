@@ -1,1 +1,12 @@
 <h1>Movie#show</h1>
+
+<h3><%= @movie.name %></h3>
+<h4>Directed by: <%= @movie.director %></h4>
+<p><%= @movie.movie_ranking %></p>
+<p><%= @movie.description %></p>
+
+<%= link_to "Edit #{ @movie.name }", edit_movie %>
+<%= link_to "DELETE", movie_path, method: :delete %>
+
+<%= link_to "View all movies" %>
+<%= link_to "View all media" %>
