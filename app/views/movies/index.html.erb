@@ -1,1 +1,10 @@
-Movies#index
+<h1>Movies#index</h1>
+
+<h3>Movie List</h1>
+  <% @movies.each do |m| %>
+    <%= "Movie: #{ m.name }" %>
+    <%= "Ranking: #{ m.movie_ranking }" %>
+  <% end %>
+
+  <%= link_to "View all Media", root_path %>
+  <%= link_to "Add a Movie", new_movie_path %>
