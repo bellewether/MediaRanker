@@ -32,7 +32,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
         if @movie.update(movie_params)
           # SUCCESS
-          redirect_to movies_path
+          redirect_to movie_path
         else
           # UNSUCCESSFUL
           render :edit
@@ -46,9 +46,9 @@ class MoviesController < ApplicationController
 
   private
 
-  # def movies_params
-  #   params.require(:movie).permit(:name, :director, :description)
-  # end
+  def movie_params
+    params.require(:movie).permit(:name, :director, :description)
+  end
 
 
 end

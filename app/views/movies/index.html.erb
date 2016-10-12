@@ -2,9 +2,11 @@
 
 <h3>Movie List</h1>
   <% @movies.each do |m| %>
+    <br>
     <%= "Movie: #{ m.name }" %>
     <%= "Ranking: #{ m.movie_ranking }" %>
     <%= link_to "Upvote", movie_path(m.id) %>
+  </br>
   <% end %>
 
   <%= link_to "View all Media", root_path %>
