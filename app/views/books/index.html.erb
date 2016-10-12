@@ -1,0 +1,13 @@
+<h1>Books#index</h1>
+
+<h3>Book List</h1>
+  <% @books.each do |b| %>
+    <br>
+    <%= "Book: #{ b.name }" %>
+    <%= "Ranking: #{ b.book_ranking }" %>
+    <%= link_to "Upvote", book_path(b.id) %>
+  </br>
+  <% end %>
+
+  <%= link_to "View all Media", root_path %>
+  <%= link_to "Add a Book", new_book_path %>
