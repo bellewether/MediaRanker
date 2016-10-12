@@ -1,13 +1,25 @@
-<h1>Albums#index</h1>
+<div class = "page-header">
+  <h1>
+    <a href = "/">Media Ranker</a>
+    <small>Ranking the Best of Everything</small>
+  </h1>
+</div>
 
-<h3>Album List</h1>
+<table>
+  <tr>
+    <th>Ranking</th>
+    <th>Name</th>
+    <th>Upvote</th>
+  </tr>
+
   <% @albums.each do |a| %>
-    <br>
-    <%= "Album: #{ a.name }" %>
-    <%= "Ranking: #{ a.album_ranking }" %>
-    <%= link_to "Upvote", album_path(a.id) %>
-  </br>
+    <tr>
+      <td><%= "Ranked: #{ a.album_ranking }" %></td>
+      <td><%= a.name %></td>
+      <td><%= link_to "Upvote", album_path(a.id) %></td>
+    </tr>
   <% end %>
+</table>
 
-  <%= link_to "View all Media", root_path %>
-  <%= link_to "Add an Album", new_album_path %>
+<%= link_to "View all Media", root_path %>
+<%= link_to "Add an Album", new_album_path %>
