@@ -1,0 +1,12 @@
+<h1>Album#show</h1>
+
+<h3><%= @album.name %></h3>
+<h4>By: <%= @album.artist %></h4>
+<p><%= @album.album_ranking %></p>
+<p><%= @album.description %></p>
+
+<%= link_to "Edit #{ @album.name }", edit_album_path %>
+<%= link_to "DELETE", album_path, method: :delete %>
+
+<%= link_to "View all albums", albums_path %>
+<%= link_to "View all media", root_path %>

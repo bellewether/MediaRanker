@@ -1,0 +1,13 @@
+<h1>Albums#index</h1>
+
+<h3>Album List</h1>
+  <% @albums.each do |a| %>
+    <br>
+    <%= "Album: #{ a.name }" %>
+    <%= "Ranking: #{ a.album_ranking }" %>
+    <%= link_to "Upvote", album_path(a.id) %>
+  </br>
+  <% end %>
+
+  <%= link_to "View all Media", root_path %>
+  <%= link_to "Add an Album", new_album_path %>
