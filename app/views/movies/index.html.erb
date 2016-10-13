@@ -5,18 +5,19 @@
   </h1>
 </div>
 
-<table>
-  <tr>
-    <th>Ranking</th>
-    <th>Name</th>
-    <th>Upvote</th>
-  </tr>
+<main>
+  <table class= "row">
+    <tr>
+      <th class = "large-2 columns">Ranking</th>
+      <th class = "large-8 columns">Name</th>
+      <th class = "large-2 columns">Upvote</th>
+    </tr>
 
   <% @movies.each do |m| %>
-    <tr>
-      <td><%= "Ranked: #{ m.movie_ranking }" %></td>
-      <td><%= m.name %></td>
-      <td><%= link_to "Upvote", movie_path(m.id) %></td>
+    <tr class= "row">
+      <td class = "large-2 columns"><%= "Ranked: #{ m.movie_ranking }" %></td>
+      <td class = "large-8 columns"><%= m.name %></td>
+      <td class = "large-2 columns"><%= link_to "Upvote", movie_path(m.id) %></td>
     </tr>
   <% end %>
 </table>
