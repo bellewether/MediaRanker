@@ -32,7 +32,7 @@ class AlbumsController < ApplicationController
     @album = Album.find(params[:id])
         if @album.update(album_params)
           # SUCCESS
-          redirect_to albums_path
+          redirect_to album_path
         else
           # UNSUCCESSFUL
           render :edit
@@ -46,8 +46,8 @@ class AlbumsController < ApplicationController
 
   private
 
-  # def albums_params
-  #   params.require(:album).permit(:name, :director, :description)
-  # end
+  def album_params
+    params.require(:album).permit(:name, :artist, :description)
+  end
 
 end
