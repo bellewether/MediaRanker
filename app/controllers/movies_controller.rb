@@ -2,6 +2,7 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all
+    @movies = Movie.all.order(:movie_ranking).reverse
   end
 
   def show
@@ -42,6 +43,12 @@ class MoviesController < ApplicationController
   def destroy
     Movie.find(params[:id]).destroy
     redirect_to movies_path
+  end
+
+  def upvote
+    @movie = Movie.find(params[:id])
+    @movie.increment!(:movie_ranking)
+    redirect_to movie_path
   end
 
   private
