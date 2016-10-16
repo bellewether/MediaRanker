@@ -35,6 +35,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use faker to populate the database with fake seed data
 gem 'faker'
 
+group :test do
+  gem 'minitest-reporters'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
