@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :movies do
     member do
       get :upvote
-      patch :upvote
+      post :upvote
     end
   end
   # The member block nested in the resources will create two
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :albums do
     member do
       get :upvote
-      patch :upvote
+      post :upvote
     end
   end
   # The member block nested in the resources will create two
@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   resources :books do
     member do
       get :upvote
-      patch :upvote
+      post :upvote
     end
   end
   # The member block nested in the resources will create two

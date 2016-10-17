@@ -1,9 +1,9 @@
 <h3><%= @movie.name %></h3>
 <h4>Directed by: <%= @movie.director %></h4>
-<p>Ranked: <%= @movie.movie_ranking %></p>
+<p>Ranked: <%= @movie.ranking %></p>
 <p><%= @movie.description %></p>
 
-<%= link_to "Upvote", action: :upvote, id: @movie.id %>
+<%= button_to "Upvote", action: :upvote, id: @movie.id %>
 <p></p>
 <%= link_to "Edit #{ @movie.name }", edit_movie_path %>
 <%= link_to "DELETE", movie_path, method: :delete %>
