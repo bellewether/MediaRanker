@@ -1,4 +1,4 @@
-gitRails.application.routes.draw do
+Rails.application.routes.draw do
 
   root 'home#index'
   resources :home, only: [:index]
