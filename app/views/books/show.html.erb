@@ -5,6 +5,8 @@
 <p><%= @book.book_ranking %></p>
 <p><%= @book.description %></p>
 
+<%= link_to "Upvote", action: :upvote, id: @book.id %>
+<p></p>
 <%= link_to "Edit #{ @book.name }", edit_book_path %>
 <%= link_to "DELETE", book_path, method: :delete %>
 

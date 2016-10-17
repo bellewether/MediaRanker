@@ -5,6 +5,8 @@
 <p><%= @album.album_ranking %></p>
 <p><%= @album.description %></p>
 
+<%= link_to "Upvote", action: :upvote, id: @album.id %>
+<p></p>
 <%= link_to "Edit #{ @album.name }", edit_album_path %>
 <%= link_to "DELETE", album_path, method: :delete %>
 
