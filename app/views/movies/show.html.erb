@@ -1,12 +1,24 @@
-<h3><%= @movie.name %></h3>
-<h4>Directed by: <%= @movie.director %></h4>
-<p>Ranked: <%= @movie.ranking %></p>
-<p><%= @movie.description %></p>
+<main>
+  <title class="row">
+    <h3><%= @movie.name %>
+    <small>Directed by: <%= @movie.director %></small>
+    </h3>
+  </title>
+  <h4 class="row">
+    <p>Ranked: <%= @movie.ranking %></p>
+  </h4>
+  <div class="row">
+    <p><%= @movie.description %></p>
+  </div>
 
-<%= button_to "Upvote", action: :upvote, id: @movie.id %>
-<p></p>
-<%= link_to "Edit #{ @movie.name }", edit_movie_path %>
-<%= link_to "DELETE", movie_path, method: :delete %>
+  <div class="row">
+    <%= button_to "Upvote", action: :upvote, id: @movie.id %>
+    <p></p>
 
-<%= link_to "View all movies", movies_path %>
-<%= link_to "View all media", root_path %>
+    <%= link_to "Edit #{ @movie.name }", edit_movie_path %>
+    <%= link_to "DELETE", movie_path, method: :delete %>
+
+    <%= link_to "View all movies", movies_path %>
+    <%= link_to "View all media", root_path %>
+  </div>
+</main>
