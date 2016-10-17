@@ -1,9 +1,9 @@
 <main>
-  <title class="row">
+  <div class="row">
     <h3><%= @movie.name %>
     <small>Directed by: <%= @movie.director %></small>
     </h3>
-  </title>
+  </div>
   <h4 class="row">
     <p>Ranked: <%= @movie.ranking %></p>
   </h4>
@@ -15,10 +15,10 @@
     <%= button_to "Upvote", action: :upvote, id: @movie.id %>
     <p></p>
 
-    <%= link_to "Edit #{ @movie.name }", edit_movie_path %>
-    <%= link_to "DELETE", movie_path, method: :delete %>
+    <%= button_to "Edit #{ @movie.name }", edit_movie_path, method: :get %>
+    <%= button_to "DELETE", movie_path, method: :delete %>
 
-    <%= link_to "View all movies", movies_path %>
-    <%= link_to "View all media", root_path %>
+    <%= button_to "View all movies", movies_path, method: :get %>
+    <%= button_to "View all media", root_path, method: :get %>
   </div>
 </main>

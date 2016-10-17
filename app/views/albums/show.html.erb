@@ -1,10 +1,10 @@
 <main>
-  <title class="row">
+  <div class="row">
     <h3>
       <%= @album.name %>
       <small>By: <%= @album.artist %></small>
     </h3>
-  </title>
+  </div>
   <h4 class="row">
     <p><%= @album.ranking %></p>
   </h4>
@@ -16,10 +16,10 @@
     <%= button_to "Upvote", action: :upvote, id: @album.id %>
     <p></p>
 
-    <%= link_to "Edit #{ @album.name }", edit_album_path %>
+    <%= link_to "Edit #{ @album.name }", edit_album_path, method: :get %>
     <%= link_to "DELETE", album_path, method: :delete %>
 
-    <%= link_to "View all albums", albums_path %>
-    <%= link_to "View all media", root_path %>
+    <%= link_to "View all albums", albums_path, method: :get %>
+    <%= link_to "View all media", root_path, method: :get %>
   </div>
 </main>

@@ -18,7 +18,7 @@
   <% media.each do |m| %>
     <tr class= "row">
       <td class = "large-2 columns"><%= "Ranked: #{ m.ranking }" %></td>
-      <td class = "large-8 columns"><%= m.name %></td>
+      <td class = "large-8 columns"><%= link_to m.name, action: :show, id: m.id %></td>
       <td class = "large-2 columns"><%= button_to "Upvote", action: :upvote, id: m.id %></td>
     </tr>
   <% end %>
