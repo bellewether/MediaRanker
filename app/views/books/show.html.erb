@@ -1,25 +1,23 @@
 <main>
   <div class="row">
-    <h3>
-      <%= @book.name %>
-      <small>Written by: <%= @book.author %></small>
+    <h3><%= @book.name %>
+    <small>Directed by: <%= @book.author %></small>
     </h3>
   </div>
   <h4 class="row">
-    <%= @book.ranking %>
+    <p>Ranked: <%= @book.ranking %></p>
   </h4>
   <div class="row">
     <p><%= @book.description %></p>
   </div>
 
   <div class="row">
-    <%= button_to "Upvote", action: :upvote, id: @book.id %>
+    <%= button_to "Upvote", { action: :upvote, id: @book.id }, :class => "upvote" %>
     <p></p>
 
-    <%= link_to "Edit #{ @book.name }", edit_book_path, method: :get %>
-    <%= link_to "DELETE", book_path, method: :delete %>
-
-    <%= link_to "View all books", books_path, method: :get %>
-    <%= link_to "View all media", root_path, method: :get %>
+    <%= button_to "Edit #{ @book.name }", edit_book_path, method: :get, :class => "normal-button" %>
+    <%= button_to "DELETE", book_path, method: :delete, :class => "delete", data: { confirm: "Are you really sure?" } %>
+    <%= button_to "View all books", books_path, method: :get, :class => "normal-button" %>
+    <%= button_to "View all media", root_path, method: :get, :class => "normal-button" %>
   </div>
 </main>
