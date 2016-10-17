@@ -1,26 +1,3 @@
-<div class = "page-header">
-  <h1>
-    <a href = "/">Media Ranker</a>
-    <small>Ranking the Best of Everything</small>
-  </h1>
-</div>
+<%= render partial: "/layouts/index", locals: { media: @movies } %>
 
-<main>
-  <table class= "row">
-    <tr>
-      <th class = "large-2 columns">Ranking</th>
-      <th class = "large-8 columns">Name</th>
-      <th class = "large-2 columns">Upvote</th>
-    </tr>
-
-  <% @movies.each do |m| %>
-    <tr class= "row">
-      <td class = "large-2 columns"><%= "Ranked: #{ m.movie_ranking }" %></td>
-      <td class = "large-8 columns"><%= m.name %></td>
-      <td class = "large-2 columns"><%= link_to "Upvote", movie_path(m.id) %></td>
-    </tr>
-  <% end %>
-</table>
-
-<%= link_to "View all Media", root_path %>
 <%= link_to "Add a Movie", new_movie_path %>

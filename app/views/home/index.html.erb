@@ -15,7 +15,7 @@
       <% 10.times do |m| %>
         <h4>
           <%= link_to "#{ @movies[m].name }", movie_path(@movies[m].id) %>
-          <small><%= "Ranked: #{ @movies[m].movie_ranking }" %></small>
+          <small><%= "Ranked: #{ @movies[m].ranking }" %></small>
         </h4>
       <% end %>
       <p><%= link_to("View more movies", movies_path) %></p>
@@ -25,7 +25,7 @@
       <% 10.times do |b| %>
         <h4>
           <%= link_to "#{ @books[b].name }", book_path(@books[b].id) %>
-          <small><%= "Ranked: #{ @books[b].book_ranking }" %></small>
+          <small><%= "Ranked: #{ @books[b].ranking }" %></small>
         </h4>
       <% end %>
       <p><%= link_to("View more books", books_path) %></p>
@@ -35,7 +35,7 @@
       <% 10.times do |a| %>
         <h4>
           <%= link_to "#{ @albums[a].name }", album_path(@albums[a].id) %>
-          <small><%= "Ranked: #{ @albums[a].album_ranking }" %></small>
+          <small><%= "Ranked: #{ @albums[a].ranking }" %></small>
         </h4>
       <% end %>
       <p><%= link_to("View more albums", albums_path) %></p>

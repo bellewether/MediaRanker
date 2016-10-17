@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all
+    @books = Book.all.order(:ranking).reverse
   end
 
   def show
@@ -45,7 +45,7 @@ class BooksController < ApplicationController
 
   def upvote
     @book = Book.find(params[:id])
-    @book.increment!(:book_ranking)
+    @book.increment!(:ranking)
     redirect_to book_path
   end
 

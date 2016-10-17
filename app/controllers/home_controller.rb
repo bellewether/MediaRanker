@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
 
   def index
-    @books = Book.all.order(:book_ranking).reverse
-    @movies = Movie.all.order(:movie_ranking).reverse
-    @albums = Album.all.order(:album_ranking).reverse
+    @books = Book.all.order(:ranking).reverse
+    @movies = Movie.all.order(:ranking).reverse
+    @albums = Album.all.order(:ranking).reverse
   end
 
 end

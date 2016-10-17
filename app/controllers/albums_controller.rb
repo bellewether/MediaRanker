@@ -1,7 +1,7 @@
 class AlbumsController < ApplicationController
 
   def index
-    @albums = Album.all
+    @albums = Album.all.order(:ranking).reverse
   end
 
   def show
@@ -46,7 +46,7 @@ class AlbumsController < ApplicationController
 
   def upvote
     @album = Album.find(params[:id])
-    @album.increment!(:album_ranking)
+    @album.increment!(:ranking)
     redirect_to album_path
   end
 
