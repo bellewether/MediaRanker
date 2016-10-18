@@ -10,13 +10,13 @@ class BookTest < ActiveSupport::TestCase
   end
 
   test "Create two books with different names" do
-    book_one = Book.create!(name: "Americanah", author: "Chimamanda Ngozi Adichie")
+    book_one = Book.create!(name: "Half of a Yellow Sun", author: "Chimamanda Ngozi Adichie")
     book_two = Book.create!(name: "Sister Outsider", author: "Audre Lorde")
     assert book_two.valid?
   end
 
   test "Cannot create two books with the same name" do
-    book_one = Book.create!(name: "The Prophet", author: "Kahlil Gibran")
+    assert books(:the_prophet).valid?
     book_two = Book.new(name: "The Prophet", author: "Kahlil Gibran")
     assert_not book_two.valid?
   end

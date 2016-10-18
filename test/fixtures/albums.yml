@@ -4,10 +4,10 @@ one:
   name: MyString
   artist: MyString
   description: MyString
-  album_ranking: 
+  ranking:
 
 two:
   name: MyString
   artist: MyString
   description: MyString
-  album_ranking: 
+  ranking:
